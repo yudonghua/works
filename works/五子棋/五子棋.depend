@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1450709603 source:f:\五子棋\main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1455159984 source:f:\代码\五子棋\main.c
+	<windows.h>
+

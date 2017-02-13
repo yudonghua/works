@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double j,m,a[10000],b[10000],c[10000];
+    int i,n,d[10000],e[10000];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&d[i]);
+
+        scanf("%d",&e[i]);
+
+    }
+    for(i=0;i<n-1;i++)
+    {
+        a[i]=d[i+1]-d[i];
+        b[i]=e[i+1]-e[i];
+        if(b[i]!=0)c[i]=a[i]/b[i];
+        else
+        {
+            if(a[i]!=0)
+             c[i]=b[i];
+
+        }
+    }
+    if(c[0]==c[1]&&c[0]==c[2])m=c[0];
+    if(c[0]==c[2]&&c[0]==c[3])m=c[0];
+    if(c[0]==c[1]&&c[0]==c[3])m=c[0];
+    if(c[1]==c[2]&&c[1]==c[3])m=c[1];
+    if(c[1]==c[3]&&c[1]==c[0])m=c[1];
+    if(c[1]==c[0]&&c[1]==c[2])m=c[1];
+    if(c[2]==c[3]&&c[2]==c[0])m=c[2];
+    if(c[2]==c[1]&&c[2]==c[3])m=c[2];
+    if(c[2]==c[0]&&c[2]==c[3])m=c[2];
+    if(c[3]==c[1]&&c[3]==c[2])m=c[3];
+    if(c[3]==c[0]&&c[3]==c[2])m=c[3];
+    if(c[3]==c[1]&&c[3]==c[0])m=c[3];
+    for(i=0;i<n;i++)
+    if(c[i]!=m){printf("%d %d",d[i],e[i]);break;}
+    return 0;
+}
+http://bbs.tianya.cn/post-funinfo-3157153-1.shtml
+http://www.tudou.com/plcover/7XuvEiomOqM/

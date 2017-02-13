@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1454732370 source:f:\推箱子\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1454811790 source:f:\代码\推箱子\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+

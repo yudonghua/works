@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1454864948 source:f:\表白（更美）\main.c
+	<stdio.h>
+	<windows.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<conio.h>
+
+1454864948 source:f:\代码\表白（更美）\main.c
+	<stdio.h>
+	<windows.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<conio.h>
+

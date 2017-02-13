@@ -1,0 +1,12 @@
+#include <windows.h>
+void gotoxy(int x, int y) //定位到第y行的第x列
+{
+int xx=0x0b;
+HANDLE hOutput;
+COORD loc;
+loc.X = x;
+loc.Y=y;
+hOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+SetConsoleCursorPosition(hOutput, loc);
+return;
+}

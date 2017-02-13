@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1456330141 source:f:\行列式计算\main.c
+	<stdio.h>
+	<math.h>
+	<windows.h>
+

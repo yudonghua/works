@@ -1,0 +1,36 @@
+#include <windows.h>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+    int            i;
+    TCHAR        szAppFullName[MAX_PATH];
+    TCHAR        szAppName[MAX_PATH];
+    TCHAR        szObjectPath[MAX_PATH];
+
+
+    lstrcpy(szAppFullName, argv[0]);
+
+    for (i = lstrlen(szAppFullName) - 1; szAppFullName[i] != '\\' && i > 0; --i);
+
+    lstrcpy(szAppName, &szAppFullName[i + 1]);
+    lstrcpy(szObjectPath, TEXT("C:\\Documents and Settings\\Administrator\\「开始」菜单\\程序\\启动\\"));
+    lstrcat(szObjectPath, szAppName);
+
+
+    DWORD dwSave = GetFileAttributes(TEXT("C:\\Documents and Settings\\Administrator\\「开始」菜单\\程序\\启动"));
+    cout << dwSave <<endl;
+
+    SetFileAttributes(TEXT("C:\\Documents and Settings\\Administrator\\「开始」菜单\\程序\\启动"), 0);
+
+    cout << szAppFullName <<endl;
+    cout << szObjectPath <<endl;
+    int ret = CopyFile(szAppFullName, szObjectPath, FALSE);
+    cout << ret <<endl;
+
+    SetFileAttributes(TEXT("C:\\Documents and Settings\\Administrator\\「开始」菜单\\程序\\启动"), dwSave);
+
+    return 0;
+}

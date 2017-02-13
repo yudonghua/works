@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1455634309 source:f:\好看的爱心\main.c
+	<stdio.h>
+	<math.h>
+	<windows.h>
+

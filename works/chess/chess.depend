@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1474436023 source:f:\ДњТы\chess\main.c
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<conio.h>
+	<windows.h>
+

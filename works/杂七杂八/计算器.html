@@ -1,0 +1,61 @@
+<html>
+<marquee><font color="red">晴空工作室</font></marquee>
+<head>
+<title><font color="blue">禹氏计算器</font></title>
+<style type="text/css">
+td{text-align:center}
+</style>
+<script type="text/javascript">
+function compute(op) 
+{
+var num1, num2;
+num1=parseFloat(document.myform.txtnum1.value);
+num2=parseFloat(document.myform.txtnum2.value);
+if (op=="+")
+document.myform.txtresult.value = num1+num2;
+if (op=="-")
+document.myform.txtresult.value = num1-num2;
+if (op=="*")
+document.myform.txtresult.value = num1*num2;
+if (op=="/"&& num2!=0)
+document.myform.txtresult.value = num1/num2;
+ }
+function closewindow()
+{
+if (window.confirm("你确定要退出系统吗"))
+window.close();
+}
+</script>
+</head>
+<body>
+<form action ="" method ="post" name="myform" id="myform">
+<table border="1px solid black " bgcolor="yellow" align="center">
+<tr>
+<td colspan="4"><h3><font color="blue">禹氏计算器</font ></h3></td>    
+</tr>
+<tr>
+<td>第一个数</td>
+<td colspan="3"><input name ="txtnum1" type="text" class="textbaroder" id="txtnum1" size ="25" /></td>
+</tr>
+<tr>
+<td>第二个数</td>
+<td colspan="3"><input name ="txtnum2" type="text" class="textbaroder" id="txtnum2" size ="25" /></td>
+</tr>
+<tr>
+<td><input name="add" type="button" id="add" value="  ＋  " onClick="compute('+')"></td>
+<td><input name="sub" type="button" id="sub" value="  －  " onClick="compute('-')"></td>
+<td><input name="mul" type="button" id="mul" value="  ×  " onClick="compute('*')"></td>
+<td><input name="div" type="button" id="div" value="  ÷  " onClick="compute('/')"></td>
+</tr>
+<tr>
+<td>计算结果</td>
+<td colspan="3"><input name="txtresult" type="text" class="textBaroder" id="txtresult" size="25"></td>
+<td><input type="button" name="exit" value="退出" onclick="closewindow()" /></td>
+</tr>
+</table>
+</form>
+</body>
+<marquee><font color="purple">我思故我在</font></marquee>
+</html>
+ 
+

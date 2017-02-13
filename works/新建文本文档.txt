@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <windows.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include <conio.h>
+#define I 10
+#define R 170
+#include <windows.h>
+void gotoxy(int x, int y)
+{
+int xx=0x0b;
+HANDLE hOutput;
+COORD loc;
+loc.X = x;
+loc.Y=y;
+hOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+SetConsoleCursorPosition(hOutput, loc);
+return;
+}
+void color(const unsigned short color1)
+{
+    if(color1>=0&&color1<=15)
+SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color1);
+    else
+SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+}
+
+char sh;
+char h[250]={"曾经\n\n有一份真挚的爱情摆在我面前\n我没有珍惜\n等到我失去的时候才后悔莫及\n人世间最痛苦的事莫过于此......\n如果上天能够给我一个再来一次的机会\n我会对那个女孩子说三个字\n“我爱你。”\n如果非要在这份爱上加一个期限，\n我希望是.....一万年！\n"};
+int main()
+{
+    int r,a,i,j,e,z,k=0;
+    char ch;
+
+
+   while(1)
+   {
+       system("cls");
+       for(i=0;i<3*k&&i<250;i++)
+       {
+          printf("%c",h[i]);
+       }
+   for(i=1,a=I,r=0;i<I/2;i++,a--,r++){
+       gotoxy(35,r);
+       for(j=I-sqrt(I*I-(a-i)*(a-i));j>0;j--)
+           printf(" ");
+       for(e=1;e<=sqrt(I*I-(a-i)*(a-i));e++)
+           {color((e+k)%16);printf("\3");}
+           z=2*sqrt(I*I-(a-i)*(a-i));
+       for(;e<=2*sqrt(I*I-(a-i)*(a-i));e++)
+           {color((z-e+k)%16);printf("\3");}
+for(j=2*( I-sqrt(I*I-(a-i)*(a-i)) );j>0;j--)
+           printf(" ");
+for(e=1;e<=sqrt(I*I-(a-i)*(a-i));e++)
+           {color((e+k)%16);printf("\3");}
+           for(;e<=2*sqrt(I*I-(a-i)*(a-i));e++)
+           {color((z-e+k)%16);printf("\3");}
+    printf("\n");
+   }
+
+
+   for(i=1;i<=R/2;i++)
+   {
+       if(i%2||i%3)continue;gotoxy(35,r);r++;
+       for(j=R-sqrt(R*R-i*i);j>0;j--)
+           printf(" ");
+       for(e=1;e<=( sqrt(R*R-i*i) - (R-2*I) );e++)
+           {color((e+k)%16);printf("\3");}
+           z=2*( sqrt(R*R-i*i) - (R-2*I) );
+           for(;e<=2*( sqrt(R*R-i*i) - (R-2*I) );e++)
+           {color((z-e+k)%16);printf("\3");}
+       printf("\n");
+   }
+   k++;
+    Sleep(50);
+    system("color c");
+   }
+   return 0;
+}

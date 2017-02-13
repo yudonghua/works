@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1455163505 source:f:\代码\鼠标版五子棋\main.c
+	<stdio.h>
+	<windows.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<conio.h>
+
